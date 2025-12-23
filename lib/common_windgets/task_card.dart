@@ -40,12 +40,12 @@ class TaskCard extends StatelessWidget {
                 value: isCompleted,
                 onChanged: onChanged,
               ),
-              SizedBox(width: 8.w),
+
               Expanded(
                 child: Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 17.sp,
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                     decoration: isCompleted
@@ -58,14 +58,17 @@ class TaskCard extends StatelessWidget {
           ),
           SizedBox(height: 8.h),
 
-          Text(
-            description,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.black87,
-              decoration: isCompleted
-                  ? TextDecoration.lineThrough
-                  : TextDecoration.none,
+          Padding(
+            padding: EdgeInsets.only(left: 12.w),
+            child: Text(
+              description,
+              style: TextStyle(
+                fontSize: 16.sp,
+                color: Colors.black87,
+                decoration: isCompleted
+                    ? TextDecoration.lineThrough
+                    : TextDecoration.none,
+              ),
             ),
           ),
 
